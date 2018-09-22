@@ -12,10 +12,9 @@ class GridWorldEnvironment(object):
     All the information about this GridWorld is provided in the notes.
     """
 
-    def __init__(self, num_states, num_actions, initial_state, terminal_state, discount_factor):
+    def __init__(self, num_states, num_actions, initial_state=1, terminal_state=23, discount_factor = .9):
         self.num_states = num_states
         self.num_actions = num_actions
-
         self.actions = np.array(["AU", "AR", "AD", "AL"])
         self.env_dynamics = {
             "S": .80,
@@ -30,9 +29,16 @@ class GridWorldEnvironment(object):
             "O": 0
         }
 
+        # discount reward factor
         self.discount = discount_factor
+
+        # initial state for the agent
         self.initial_state = initial_state
+
+        # goal state
         self.terminal_state = terminal_state
+
+        # current state of the agent
         self.current_state = self.initial_state
 
     def get_initial_state(self):
@@ -44,14 +50,12 @@ class GridWorldEnvironment(object):
 
     def get_action(self, state, agent_policy):
         """ Sample an action from the agent's policy given the current state """
-
         action_prob_dist = agent_policy[state-1].reshape(-1,)
         action = np.random.choice(self.actions.reshape(-1,), p=action_prob_dist)
         return action
 
     def get_new_state(self, current_state, current_action):
         """ Return a sampled new state, s_{t+1} given the current state, s_t, and current action, a_t"""
-
         # the terminal state always goes to terminal absorbing state with prob 1
         if current_state == self.terminal_state:
             return "s_inf"
@@ -118,8 +122,7 @@ class GridWorldEnvironment(object):
 
     def check_valid_action(self, action, current_state):
         """
-        Checks to see if the action taken results in a valid state
-        transition
+        Checks to see if the action taken results in a valid state transition
         """
         if (action == "AL"  and current_state == 13) or (action == "AR" and current_state == 12):
             return False
