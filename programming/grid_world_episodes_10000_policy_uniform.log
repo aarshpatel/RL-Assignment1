@@ -1,0 +1,25 @@
+INFO:root:State 21 Given State 18: 0
+INFO:root:Episode: 0, Discounted Sum of Rewards: -3.42532634929
+INFO:root:State 21 Given State 18: 0
+INFO:root:Episode: 1000, Discounted Sum of Rewards: -0.403273532153
+INFO:root:State 21 Given State 18: 0
+INFO:root:Episode: 2000, Discounted Sum of Rewards: 8.20831010442e-06
+INFO:root:State 21 Given State 18: 0
+INFO:root:Episode: 3000, Discounted Sum of Rewards: -0.132983649545
+INFO:root:State 21 Given State 18: 0
+INFO:root:Episode: 4000, Discounted Sum of Rewards: -0.0881295590013
+INFO:root:State 21 Given State 18: 0
+INFO:root:Episode: 5000, Discounted Sum of Rewards: -1.69775616115
+INFO:root:State 21 Given State 18: 0
+INFO:root:Episode: 6000, Discounted Sum of Rewards: 0.0636268544114
+INFO:root:State 21 Given State 18: 0
+INFO:root:Episode: 7000, Discounted Sum of Rewards: -3.15690682361e-05
+INFO:root:State 21 Given State 18: 0
+INFO:root:Episode: 8000, Discounted Sum of Rewards: 0.00626578748218
+INFO:root:State 21 Given State 18: 0
+INFO:root:Episode: 9000, Discounted Sum of Rewards: -0.482954507383
+INFO:root:Simulation: 0.0
+INFO:root:Mean: -0.638732227109
+INFO:root:Std: 2.35384021392
+INFO:root:Max: 4.782969
+INFO:root:Min: -33.3049171271
