@@ -15,19 +15,15 @@ class GridWorldEnvironment(object):
     def __init__(self, num_states, num_actions, initial_state=1, terminal_state=23, discount_factor = .9):
         self.num_states = num_states
         self.num_actions = num_actions
-        self.actions = np.array(["AU", "AR", "AD", "AL"])
-        self.env_dynamics = {
-            "S": .80,
-            "VR": .05,
-            "VL": .05,
-            "B": .10
-        }
 
-        self.rewards = {
-            "W": -10,
-            "G": 10,
-            "O": 0
-        }
+        # set of actions
+        self.actions = np.array(["AU", "AR", "AD", "AL"])
+
+        # environment dynamics
+        self.env_dynamics = { "S" : .80, "VR": .05, "VL": .05, "B": .10 }
+
+        # reward function
+        self.rewards = { "W": -10, "G": 10, "O": 0 }
 
         # discount reward factor
         self.discount = discount_factor
